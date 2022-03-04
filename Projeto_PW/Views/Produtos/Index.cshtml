@@ -1,5 +1,23 @@
 ﻿@model List<Projeto_PW.Models.ProdutoModel>
 
-@for (int i = 0; i < Model.Count; i++){
-<p>@Model[i].Descricao  -  @Model[i].Codigo </p>
-}
+<table class="table">
+    <tr>
+        <td>Codigo</td>
+        <td>Descrição</td>
+        <td>Valor</td>
+        <td>DataVencimento</td>
+    </tr>
+
+
+    @for (int i = 0; i < Model.Count; i++)
+    {
+        <tr>
+            <td>@Model[i].Codigo</td>
+            <td>@Model[i].Descricao</td>
+            <td>@Model[i].Valor</td>
+            <td>@Model[i].DataVencimento</td>
+        </tr>
+
+
+    }
+</table>
